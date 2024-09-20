@@ -30,3 +30,7 @@ function typeText(element, text){
        }
     },20)
 }
+
+function generateUniqueId(){
+    
+}
