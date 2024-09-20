@@ -26,7 +26,7 @@ function typeText(element, text){
         element.innerHTML += text.chartAt(index);
         index++;
        }else{
-        
+        clearInterval(interval);
        }
     },20)
 }
