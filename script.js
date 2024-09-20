@@ -22,6 +22,8 @@ function typeText(element, text){
     let index= 0;
 
     let interval = setInterval(()=>{
-
+       if(index < text.length){
+        
+       }
     },20)
 }
