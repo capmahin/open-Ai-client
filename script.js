@@ -96,7 +96,15 @@ const handleSubmit = async (e)=>{
             prompt:data.get('prompt')
         })
     })
-    clearInterval(loadInterval)
+    clearInterval(loadInterval);
+    messageDivDiv.innerHTML = '';
+
+    if(response.ok){
+        const data = await response.json();
+        const parsedDate = data.bot.trim();
+
+        typeText();
+    }
 }
 
 form.addEventListener('submit', handleSubmit);
