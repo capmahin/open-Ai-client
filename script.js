@@ -97,7 +97,7 @@ const handleSubmit = async (e)=>{
         })
     })
     clearInterval(loadInterval);
-    messageDivDiv.innerHTML = '';
+    messageDiv.innerHTML = '';
 
     if(response.ok){
         const data = await response.json();
@@ -106,7 +106,10 @@ const handleSubmit = async (e)=>{
         typeText(messageDiv, parsedDate);
 
     }else{
-        const err = await response.json();
+        const err = await response.text();
+        messageDiv.innerHTML = "Something went wrong";
+
+        alert(err);
     }
 }
 
