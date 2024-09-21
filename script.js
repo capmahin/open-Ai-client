@@ -45,7 +45,9 @@ function chatStripe (isAi, value, uniqueId){
         <div class="wrapper ${isAi && 'ai'}">
         <div class="caht">
            <div className="profile">
-           
+           <img
+           src-="${isAi ? bot : user}"
+           />
            </div>
         </div>
         </div>
