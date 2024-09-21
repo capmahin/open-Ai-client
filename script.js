@@ -42,7 +42,13 @@ function generateUniqueId(){
 function chatStripe (isAi, value, uniqueId){
     return(
         `
-        
+        <div class="wrapper ${isAi && 'ai'}">
+        <div class="caht">
+           <div className="profile">
+           
+           </div>
+        </div>
+        </div>
         
         
         
