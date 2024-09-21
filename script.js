@@ -40,5 +40,12 @@ function generateUniqueId(){
 }
 
 function chatStripe (isAi, value, uniqueId){
-    
+    return(
+        `
+        
+        
+        
+        
+        `
+    )
 }
