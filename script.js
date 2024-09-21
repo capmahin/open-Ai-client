@@ -1,6 +1,7 @@
 import bot from './assets/bot.svg';
 import user from './assets/user.svg';
 
+
 const form = document.querySelector('form');
 const chatContainer = document.querySelector('#chat_container');
 
@@ -83,6 +84,18 @@ const handleSubmit = async (e)=>{
     const messageDiv = document.getElementById(uniqueId);
 
     loader(messageDiv);
+
+    //fetch data from server -> bot's response
+
+    const response = await fetch('http://localhost:5000',{
+        method:'POST',
+        headers:{
+            'Content-Type':'application/json'
+        },
+        body: JSON.stringify({
+            prompt:data.get('prompt')
+        })
+    })
 }
 
 form.addEventListener('submit', handleSubmit);
