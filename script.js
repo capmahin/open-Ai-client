@@ -76,4 +76,5 @@ const handleSubmit = async (e)=>{
     //bot's chatstripe
 
     const uniqueId = generateUniqueId();
+    chatContainer.innerHTML += chatStripe(true," ");
 }
