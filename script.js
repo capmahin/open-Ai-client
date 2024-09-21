@@ -103,7 +103,10 @@ const handleSubmit = async (e)=>{
         const data = await response.json();
         const parsedDate = data.bot.trim();
 
-        typeText();
+        typeText(messageDiv, parsedDate);
+
+    }else{
+        const err = await response.json();
     }
 }
 
